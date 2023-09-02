@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+ background-image: url(/image/bird-8165143_640.jpg);
+ background-repeat: no-repeat;
+    background-size: cover;
+}
+.clock{
+    /* background: linear-gradient(3deg,rgb(42, 255, 255),rgb(228, 24, 255)); */
+    background-image: url(/image/bird-8165143_640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    border: 2px solid rgb(69, 255, 62);
+}
+/* .clock::before{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+
+} */
+.number{
+    color: rgb(0, 255, 255);
+    transform: rotate(calc(30deg * var(--n)));
+    position: absolute;
+    inset: 12px;
+    text-align: center;
+    font-size: 40px;
+}
+.number b{
+    transform: rotate(calc(-30deg * var(--n)));
+    display: inline-block;
+} 
+.main_dot{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgb(56, 252, 38);
+}
+.hour-hand,.minute-hand ,.second-hand{
+    --rotate:0;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%) rotate(calc(var(--rotate)*1deg));
+    transform-origin: bottom;
+}
+.hour-hand{
+    width: 6px;
+    height: 130px;
+    background-color: rgb(15, 209, 161);
+}
+.minute-hand {
+    width: 4px;
+    height: 180px;
+    background-color: rgb(209, 255, 3);
+}
+.second-hand{
+    width: 2px;
+    height: 190px;
+    background-color: blue;
+}
